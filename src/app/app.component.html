@@ -1,1 +1,13 @@
-{{ title }}
+<md-toolbar color="primary">
+    <span>{{ title }}</span>
+</md-toolbar>
+
+<md-sidenav-container class="sidenav-container">
+    <md-sidenav #start opened mode="side" layout="column" flex>
+        Drawer
+    </md-sidenav>
+
+    <div class="sidenav-content">
+        <button md-button (click)="start.toggle()">Toggle Start Side Drawer</button>
+    </div>
+</md-sidenav-container>
