@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IFlight } from '../../flights/flight'
 
 @Component({
   selector: 'app-map',
@@ -8,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class MapComponent {
+  @Input() flights: IFlight[];
+
   //google maps zoom level
   zoom: number = 2;
-  scrollwheelEnabled = false;
-  streetViewControlEnabled = false;
 
   //initial center position for the map
   latCenter: number = 40.673858;
   lngCenter: number = 7.815982;
 
-  strokeColor = "#f29";
-  strokeWeight = 2;
+  strokeColor = "#f59";
+  useGeodesicLines = true;
   //test
   latA: number = 40.673858;
   lngA: number = -10.815982;

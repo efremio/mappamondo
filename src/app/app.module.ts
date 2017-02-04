@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './dashboard/map/map.component';
+import { FlightsRetrieverService } from './flights/flights-retriever.service';
+
 
 @NgModule({
   declarations: [
@@ -27,8 +29,7 @@ import { MapComponent } from './dashboard/map/map.component';
     AgmCoreModule.forRoot(), //google maps
     MaterialModule.forRoot() //angular material
   ],
-  providers: [
-  ],
+  providers: [FlightsRetrieverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
