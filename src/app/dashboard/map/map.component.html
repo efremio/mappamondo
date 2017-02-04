@@ -1,0 +1,15 @@
+<sebm-google-map
+  [latitude]="latConter"
+  [longitude]="lngCenter"
+  [zoom]="zoom"
+  [scrollwheel]="scrollwheelEnabled"
+  [streetViewControl]="streetViewControlEnabled"
+  [styles]="styles">
+  <sebm-google-map-polyline [geodesic]="true" [strokeColor]="strokeColor" [strokeWeight]="strokeWeight">
+    <sebm-google-map-polyline-point [latitude]="latA" [longitude]="lngA">
+    </sebm-google-map-polyline-point>
+    <sebm-google-map-polyline-point [latitude]="latB" [longitude]="lngB">
+    </sebm-google-map-polyline-point>
+  </sebm-google-map-polyline>
+</sebm-google-map>
+{{styles}} ghtrhtrhrth

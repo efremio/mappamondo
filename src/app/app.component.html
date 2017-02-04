@@ -1,69 +1,28 @@
-<md-toolbar color="primary">
-    <span>{{ title }}</span>
+<md-toolbar color="primary" class="md-elevation-z3">
+  <span>{{ title }}</span>
+  <span class="toolbar-fill-remaining"></span>
+  <section>
+    <button md-button>DASHBOARD</button>
+    <button md-button>IMPORT</button>
+    <button md-button>flat</button>
+  </section>
+  <span class="toolbar-options-icon"></span>
 </md-toolbar>
 
 <md-sidenav-container fullscreen>
-    <md-sidenav #start opened mode="side" layout="column" flex>
-        Drawer
-    </md-sidenav>
+  <!--<md-sidenav #start opened mode="side">
 
-    <div class="sidenav-content">
-        <button md-button (click)="start.toggle()">Toggle Start Side Drawer</button> 
-        test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t   test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test test test test test
-        test test test test test test test test test test test test test test test test test test test t
-    </div>
+    <md-nav-list>
+      <md-list-item md-accent>
+        <a md-line href="...">Ygvhjbk</a>
+        <md-icon>info</md-icon>
+      </md-list-item>
+    </md-nav-list>
+
+  </md-sidenav>-->
+
+  <div class="sidenav-content" fullscreen>
+    <app-dashboard></app-dashboard>
+
+  </div>
 </md-sidenav-container>

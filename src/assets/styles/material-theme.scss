@@ -2,8 +2,8 @@
 @include md-core();
 
 // Customizations go here, for instance:
-$app-primary: md-palette($md-blue-grey);
-$app-accent:  md-palette($md-cyan);
+$app-primary: md-palette($md-cyan);
+$app-accent:  md-palette($md-lime);
 $app-warn:    md-palette($md-red);
 
 // Create the theme object (a Sass map containing all of the palettes).

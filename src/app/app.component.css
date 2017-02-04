@@ -1,18 +1,22 @@
-md-toolbar {
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-}
-
 md-sidenav-container {
   z-index: -1;
 }
 
 md-sidenav {
   width: 200px;
-  background-color: #fa2864;
-  padding-top: 100px;
+  background-color: #fff;
+  padding-top: 79px;
 }
 
 .sidenav-content {
-  padding: 15px;
-  padding-top: 100px;
+  padding: 40px;
+  padding-top: 64px;
+}
+
+.toolbar-fill-remaining {
+    flex: 1 1 auto;
+}
+
+.toolbar-options-icon {
+    padding: 0 0 0 50px;
 }
