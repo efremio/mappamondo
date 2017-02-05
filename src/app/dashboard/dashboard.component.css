@@ -6,3 +6,23 @@ app-map {
 md-grid-list {
     margin: 20px 0;
 }
+
+.flex-container {
+    width: 100%;
+}
+
+.inline-div {
+    display: inline;
+}
+
+.spacer {
+    width: 20px;
+    height: 20px;
+}
+
+.map-card {
+    width: auto;
+    height: 500px;
+    padding: 0;
+    margin:20px 0;
+}
