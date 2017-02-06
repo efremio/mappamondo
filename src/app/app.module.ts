@@ -12,13 +12,15 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './dashboard/map/map.component';
 import { FlightsRetrieverService } from './flights/flights-retriever.service';
+import { TotalFlightsWidgetComponent } from './dashboard/total-flights-widget/total-flights-widget.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    MapComponent
+    MapComponent,
+    TotalFlightsWidgetComponent
   ],
   imports: [
     BrowserModule,
