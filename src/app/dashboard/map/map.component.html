@@ -4,7 +4,8 @@
   [zoom]="zoom"
   [scrollwheel]="false"
   [streetViewControl]="false"
-  [styles]="styles">
+  [styles]="styles"
+  [backgroundColor]="backgroundColor">
   <sebm-google-map-polyline *ngFor="let flight of flights" [geodesic]="true" [strokeColor]="strokeColor" [strokeWeight]="2">
     <sebm-google-map-polyline-point [latitude]="45" [longitude]="6">
     </sebm-google-map-polyline-point>

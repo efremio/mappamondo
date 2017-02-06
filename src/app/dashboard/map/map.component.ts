@@ -19,7 +19,9 @@ export class MapComponent {
   lngCenter: number = 7.815982;
 
   strokeColor = "#f59";
+  backgroundColor = "#94dbf3";
   useGeodesicLines = true;
+  
   //test
   latA: number = 40.673858;
   lngA: number = -10.815982;
