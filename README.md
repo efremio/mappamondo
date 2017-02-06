@@ -15,18 +15,13 @@ You can get them from <a href="https://docs.npmjs.com/getting-started/installing
 Be sure that you are running at least node `v4.x.x` and npm `3.x.x` by running `node -v` and `npm -v` in a terminal/console window.
 
 ### Installing
-Install local dependencies by running the following from the project root folder:
-`npm install`
+Install local dependencies by running `npm install` from the project root folder.
 
 ### Configuring
 The app comes with a data retriever service that reads dummy data from some json files located in `src\test-data\`. By changing the implementation of that service you can get data from a real back-end.
 
 ### Running
-* Run the app
-    ```
-    cd mappamondo
-    npm start
-    ```
+* Run the app with the command `npm start`
 * Browse to the application at <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>
 
 ## Authors
