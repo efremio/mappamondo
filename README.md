@@ -24,6 +24,24 @@ The app comes with a data retriever service that reads dummy data from some json
 * Run the app with the command `npm start`
 * Browse to the application at <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>
 
+### Project status
+Mappamondo is currently in pre-alpha and under active development.
+
+#### Feature status:
+
+| Feature              | Status                              |
+|----------------------|-------------------------------------|
+| dashboard map        |                         In-progress |
+| dashboard statistics |                         In-progress |
+| add flight           |                         Not started |
+| import flights       |                         Not started |
+| authentication       |                         Not started |
+| welcome screen       |                         Not started |
+| flight history       |                         Not started |
+| flight view          |                         Not started |
+
+
+
 ## Authors
 * **Efrem Agnilleri** - [efremio](https://github.com/efremio)
 
