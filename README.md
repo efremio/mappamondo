@@ -18,7 +18,7 @@ Be sure that you are running at least node `v4.x.x` and npm `3.x.x` by running `
 Install local dependencies by running `npm install` from the project root folder.
 
 ### Configuring
-The app comes with a data retriever service that reads dummy data from some json files located in `src\test-data\`. By changing the implementation of that service you can get data from a real back-end.
+The app comes with a data retriever service that reads dummy data from some json files located in `src\test-data\`. By changing the implementation of `flights-retriever.service.ts` you can get data from a real back-end.
 
 ### Running
 * Run the app with the command `npm start`
