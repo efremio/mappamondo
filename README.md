@@ -1,6 +1,6 @@
 # Mappamondo
 
-A flight logger website made with Angular.
+Mappamondo is an application built with Angular 2 that logs all your flights and it shows to you meaningful statistics and charts.
 
 ## Getting Started
 Clone the `mappamondo` repository using git:
@@ -10,7 +10,7 @@ cd mappamondo
 ```
 
 ### Prerequisites
-Node.js and npm are essential to Angular development.
+Node.js and npm are essential both to the Angular app and for the back-end server.
 You can get them from <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">here</a> if it's not already installed on your machine.
 Be sure that you are running at least node `v4.x.x` and npm `3.x.x` by running `node -v` and `npm -v` in a terminal/console window.
 
@@ -35,10 +35,11 @@ Mappamondo is currently in pre-alpha and under active development.
 | dashboard statistics |                         In-progress |
 | add flight           |                         Not started |
 | import flights       |                         Not started |
-| authentication       |                         Not started |
 | welcome screen       |                         Not started |
 | flight history       |                         Not started |
 | flight view          |                         Not started |
+| authentication       |                         Not started |
+| back-end server      |                         Not started |
 
 
 
