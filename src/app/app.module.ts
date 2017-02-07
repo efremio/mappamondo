@@ -31,7 +31,9 @@ import { TotalFlightsWidgetComponent } from './dashboard/total-flights-widget/to
     AgmCoreModule.forRoot(), //google maps
     MaterialModule.forRoot() //angular material
   ],
-  providers: [FlightsRetrieverService],
+  providers: [
+    FlightsRetrieverService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

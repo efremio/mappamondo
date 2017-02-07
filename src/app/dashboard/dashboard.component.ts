@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IFlight } from '../flights/flight';
+import { Flight } from '../flights/flight';
 import { FlightsRetrieverService } from '../flights/flights-retriever.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { FlightsRetrieverService } from '../flights/flights-retriever.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  flights: IFlight[];
+  flights: Flight[];
 
   constructor(private _flightRetrieverService: FlightsRetrieverService) { }
 

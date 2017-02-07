@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IFlight } from '../../flights/flight'
+import { Flight } from '../../flights/flight'
 
 @Component({
   selector: 'app-map',
@@ -9,7 +9,7 @@ import { IFlight } from '../../flights/flight'
 
 
 export class MapComponent {
-  @Input() flights: IFlight[];
+  @Input() flights: Flight[];
 
   //google maps zoom level
   zoom: number = 2;
@@ -21,7 +21,7 @@ export class MapComponent {
   strokeColor = "#f59";
   backgroundColor = "#94dbf3";
   useGeodesicLines = true;
-  
+
   //test
   latA: number = 40.673858;
   lngA: number = -10.815982;

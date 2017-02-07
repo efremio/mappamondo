@@ -1,4 +1,6 @@
-export interface IFlight {
+import { Airport } from './airport';
+
+export class Flight {
     ID: number;
     date: string;
     flight_number: string;
@@ -21,4 +23,6 @@ export interface IFlight {
     username: string;
     distance: number;
     imported_from: string;
+    departing_airport: Airport;
+    arrival_airport: Airport;
 }

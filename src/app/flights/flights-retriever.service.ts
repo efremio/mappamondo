@@ -5,18 +5,17 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
-import { IFlight } from './flight';
+import { Flight } from './flight';
 
 @Injectable()
 export class FlightsRetrieverService {
-  private _flightsUrl = "test-data/flights/flights.json"; //todo change this with an URL
+  private _flightsUrl = "test-data/flights.json"; //todo change this with an URL
 
   constructor(private _http: Http) { }
 
-  getFlights(): Observable<IFlight[]> {
+  getFlights(): Observable<Flight[]> {
     return this._http.get(this._flightsUrl)
-      .map((response: Response) => <IFlight[]>response.json())
-      .do(data => console.log('All: ' + JSON.stringify(data)))
+      .map((response: Response) => <Flight[]>response.json())
       .catch(this.handleError);
   }
 
