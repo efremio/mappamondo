@@ -1,13 +1,7 @@
-import { Airport } from './airport';
-
 export class Flight {
     ID: number;
     date: string;
     flight_number: string;
-    departing_iata: string;
-    departing_icao: string;
-    arrival_iata: string;
-    arrival_icao: string;
     departure_time: string;
     arrival_time: string;
     duration: string;
@@ -20,9 +14,7 @@ export class Flight {
     flight_class: string;
     flight_reason: string;
     note: string;
-    username: string;
     distance: number;
-    imported_from: string;
-    departing_airport: Airport;
-    arrival_airport: Airport;
+    departing_airport_id: string;
+    arrival_airport_id: string;
 }

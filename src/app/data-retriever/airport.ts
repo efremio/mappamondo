@@ -1,4 +1,5 @@
 export class Airport {
+    id: string;
     name: string;
     city: string;
     country: string;
@@ -6,8 +7,4 @@ export class Airport {
     icao: string;
     latitude: number;
     longitude: number;
-    altitude: number;
-    timezone: number;
-    dat: string;
-    tz_database_timezone: string;
 }

@@ -1,6 +1,6 @@
 <md-grid-list cols="6" rowHeight="100px" gutterSize="20px">
   <md-grid-tile colspan="6" rowspan="4" class="md-elevation-z2">
-    <app-map [flights]="flights"></app-map>
+    <app-map *ngIf="flights" [flights]="flights" [airports]="airports"></app-map>
   </md-grid-tile>
 </md-grid-list>
 

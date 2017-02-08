@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Flight } from '../flights/flight';
-import { FlightsRetrieverService } from '../flights/flights-retriever.service';
+import { DashboardDataRetrieverService } from '../data-retriever/dashboard-data-retriever.service';
+import { Flight } from '../data-retriever/flight';
+import { Airport } from '../data-retriever/airport';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,12 +11,16 @@ import { FlightsRetrieverService } from '../flights/flights-retriever.service';
 })
 export class DashboardComponent implements OnInit {
   flights: Flight[];
+  airports: Airport[];
 
-  constructor(private _flightRetrieverService: FlightsRetrieverService) { }
+  constructor(private _dashboardDataRetrieverService: DashboardDataRetrieverService) { }
 
   ngOnInit() {
-    this._flightRetrieverService.getFlights()
-    .subscribe(flights => this.flights = flights)
+    this._dashboardDataRetrieverService.getData()
+      .subscribe(data => {
+        this.flights = data.flights;
+        this.airports = data.airports;
+      })
   }
 
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Flight } from '../../flights/flight'
+
+import { Flight } from '../../data-retriever/flight'
+import { Airport } from '../../data-retriever/airport';
 
 @Component({
   selector: 'app-map',
@@ -10,6 +12,7 @@ import { Flight } from '../../flights/flight'
 
 export class MapComponent {
   @Input() flights: Flight[];
+  @Input() airports: Airport[];
 
   //google maps zoom level
   zoom: number = 2;
@@ -96,5 +99,9 @@ export class MapComponent {
       stylers: [{ color: "#94dbf3" }]
     }
   ];
+
+  getAirport(id: string): Airport {
+    return this.airports.filter(airport => airport.id === id)[0];
+  }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { IFlight } from '../../flights/flight';
+import { Flight } from '../../data-retriever/flight';
 
 @Component({
   selector: 'app-total-flights-widget',
@@ -8,7 +8,7 @@ import { IFlight } from '../../flights/flight';
   styleUrls: ['./total-flights-widget.component.css']
 })
 export class TotalFlightsWidgetComponent implements OnInit {
-  @Input() flights: IFlight[];
+  @Input() flights: Flight[];
 
   constructor() { }
 

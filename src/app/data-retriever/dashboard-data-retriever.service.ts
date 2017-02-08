@@ -5,17 +5,17 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
-import { Flight } from './flight';
+import { DashboardData } from './dashboard-data';
 
 @Injectable()
-export class FlightsRetrieverService {
-  private _flightsUrl = "test-data/flights.json"; //todo change this with an URL
+export class DashboardDataRetrieverService {
+  private _dashboardDataUrl = "test-data/dashboard-data.json"; //todo change this with an URL
 
   constructor(private _http: Http) { }
 
-  getFlights(): Observable<Flight[]> {
-    return this._http.get(this._flightsUrl)
-      .map((response: Response) => <Flight[]>response.json())
+  getData(): Observable<DashboardData> {
+    return this._http.get(this._dashboardDataUrl)
+      .map((response: Response) => <DashboardData>response.json())
       .catch(this.handleError);
   }
 

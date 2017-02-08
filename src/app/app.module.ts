@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './dashboard/map/map.component';
-import { FlightsRetrieverService } from './flights/flights-retriever.service';
+import { DashboardDataRetrieverService } from './data-retriever/dashboard-data-retriever.service';
 import { TotalFlightsWidgetComponent } from './dashboard/total-flights-widget/total-flights-widget.component';
 
 
@@ -32,7 +32,7 @@ import { TotalFlightsWidgetComponent } from './dashboard/total-flights-widget/to
     MaterialModule.forRoot() //angular material
   ],
   providers: [
-    FlightsRetrieverService
+    DashboardDataRetrieverService
   ],
   bootstrap: [AppComponent]
 })
