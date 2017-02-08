@@ -15,88 +15,167 @@ export class MapComponent {
   @Input() airports: Airport[];
 
   //google maps zoom level
-  zoom: number = 2;
+  zoom: number = 3;
 
   //initial center position for the map
-  latCenter: number = 40.673858;
-  lngCenter: number = 7.815982;
+  latCenter: number = 50.673858;
+  lngCenter: number = 5.815982;
 
-  strokeColor = "#f59";
+  strokeColor = "#9575CD";
   backgroundColor = "#94dbf3";
   useGeodesicLines = true;
-
-  //test
-  latA: number = 40.673858;
-  lngA: number = -10.815982;
-
-  latB: number = 40.673858;
-  lngB: number = 20.815982;
+  markerIcon = {
+    url: 'assets/images/map-marker-32.png',
+    scaledSize: {
+      width: 8,
+      height: 14
+    }
+  };
 
   styles = [
     {
-      featureType: "administrative",
-      elementType: "all",
-      stylers: [{ visibility: "off" }]
+      "featureType": "administrative",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
     },
     {
-      featureType: "administrative.country",
-      elementType: "labels.text.fill",
-      stylers: [{ visibility: "on" }, { color: "#747474" }, { invert_lightness: true }]
+      "featureType": "administrative.country",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "visibility": "on"
+        },
+        {
+          "color": "#5f5f5f"
+        },
+        {
+          "invert_lightness": true
+        }
+      ]
     },
     {
-      featureType: "administrative.locality",
-      elementType: "all",
-      stylers: [{ visibility: "simplified" }, { color: "#b2b2b2" }]
+      "featureType": "administrative.locality",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "simplified"
+        },
+        {
+          "color": "#b2b2b2"
+        }
+      ]
     },
     {
-      featureType: "landscape",
-      elementType: "all",
-      stylers: [{ visibility: "simplified" }]
+      "featureType": "landscape",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "simplified"
+        }
+      ]
     },
     {
-      featureType: "poi",
-      elementType: "all",
-      stylers: [{ visibility: "off" }]
+      "featureType": "landscape.natural",
+      "elementType": "labels.text",
+      "stylers": [
+        {
+          "color": "#5f5f5f"
+        },
+        {
+          "invert_lightness": true
+        }
+      ]
     },
     {
-      featureType: "road",
-      elementType: "labels",
-      stylers: [{ visibility: "simplified" }]
+      "featureType": "poi",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
     },
     {
-      featureType: "road.highway",
-      elementType: "all",
-      stylers: [{ visibility: "off" }, { color: "#ffffff" }]
+      "featureType": "road",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "simplified"
+        }
+      ]
     },
     {
-      featureType: "road.highway",
-      elementType: "geometry",
-      stylers: [{ visibility: "simplified" }]
+      "featureType": "road.highway",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "off"
+        },
+        {
+          "color": "#ffffff"
+        }
+      ]
     },
     {
-      featureType: "road.local",
-      elementType: "all",
-      stylers: [{ visibility: "on" }]
+      "featureType": "road.highway",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "visibility": "simplified"
+        }
+      ]
     },
     {
-      featureType: "transit",
-      elementType: "all",
-      stylers: [{ visibility: "simplified" }]
+      "featureType": "road.local",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "on"
+        }
+      ]
     },
     {
-      featureType: "transit.line",
-      elementType: "geometry",
-      stylers: [{ color: "#ffffff" }]
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "simplified"
+        }
+      ]
     },
     {
-      featureType: "water",
-      elementType: "all",
-      stylers: [{ visibility: "simplified" }, { color: "#abbaa4" }]
+      "featureType": "transit.line",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#ffffff"
+        }
+      ]
     },
     {
-      featureType: "water",
-      elementType: "geometry",
-      stylers: [{ color: "#94dbf3" }]
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "simplified"
+        },
+        {
+          "color": "#abbaa4"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#94dbf3"
+        }
+      ]
     }
   ];
 

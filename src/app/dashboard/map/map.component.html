@@ -1,4 +1,4 @@
-<sebm-google-map [latitude]="latConter" [longitude]="lngCenter" [zoom]="zoom" [scrollwheel]="false" [streetViewControl]="false"
+<sebm-google-map [latitude]="latCenter" [longitude]="lngCenter" [zoom]="zoom" [scrollwheel]="false" [streetViewControl]="false"
   [styles]="styles" [backgroundColor]="backgroundColor">
   <sebm-google-map-polyline *ngFor="let flight of flights" [geodesic]="true" [strokeColor]="strokeColor" [strokeWeight]="2">
     <sebm-google-map-polyline-point [latitude]="1*getAirport(flight.departing_airport_id).latitude" [longitude]="1*getAirport(flight.departing_airport_id).longitude">
@@ -7,6 +7,6 @@
     </sebm-google-map-polyline-point>
   </sebm-google-map-polyline>
 
-  <sebm-google-map-marker *ngFor="let airport of airports" [latitude]="1*airport.latitude" [longitude]="1*airport.longitude">
-     </sebm-google-map-marker>
+  <sebm-google-map-marker *ngFor="let airport of airports" [latitude]="1*airport.latitude" [longitude]="1*airport.longitude" [iconUrl]="markerIcon">
+  </sebm-google-map-marker>
 </sebm-google-map>

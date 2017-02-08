@@ -79,6 +79,26 @@
       "distance": "795.672",
       "departing_airport_id": "2",
       "arrival_airport_id": "1"
+    },
+    {
+      "ID": "78",
+      "date": "2016-08-25 00:00:00",
+      "flight_number": "UA153",
+      "departure_time": "09:50:00",
+      "arrival_time": "12:10:00",
+      "duration": "08:20:00",
+      "airline_iata": "UA",
+      "airline_icao": "UAL",
+      "aircraft": "Boeing 757-200 (B752)",
+      "registration": "N14120",
+      "seat_number": "31B",
+      "seat_type": "middle",
+      "flight_class": "economy",
+      "flight_reason": "business",
+      "note": "conference",
+      "distance": "5895.32",
+      "departing_airport_id": "6",
+      "arrival_airport_id": "7"
     }
   ],
   "airports": [
@@ -131,6 +151,26 @@
       "icao": "LIRN",
       "latitude": "40.886",
       "longitude": "14.2908"
+    },
+    {
+      "id": "6",
+      "name": "Dublin",
+      "city": "Dublin",
+      "country": "Irelan",
+      "iata_faa": "DUB",
+      "icao": "EIDW",
+      "latitude": "53.4213",
+      "longitude": "-6.27007"
+    },
+    {
+      "id": "7",
+      "name": "Chicago Ohare Intl",
+      "city": "Chicago",
+      "country": "United States",
+      "iata_faa": "ORD",
+      "icao": "KORD",
+      "latitude": "41.9786",
+      "longitude": "-87.9048"
     }
   ]
 }
