@@ -31,7 +31,7 @@ Mappamondo is currently in pre-alpha and under active development.
 
 | Feature              | Status                              |
 |----------------------|-------------------------------------|
-| dashboard map        |                         In-progress |
+| dashboard map        |                           Available |
 | dashboard statistics |                         In-progress |
 | add flight           |                         Not started |
 | import flights       |                         Not started |
@@ -40,7 +40,6 @@ Mappamondo is currently in pre-alpha and under active development.
 | flight view          |                         Not started |
 | authentication       |                         Not started |
 | back-end server      |                         Not started |
-
 
 
 ## Authors

@@ -15,11 +15,11 @@ export class MapComponent {
   @Input() airports: Airport[];
 
   //google maps zoom level
-  zoom: number = 3;
+  zoom: number = 2;
 
   //initial center position for the map
-  latCenter: number = 50.673858;
-  lngCenter: number = 5.815982;
+  latCenter: number = 20;
+  lngCenter: number = 10;
 
   strokeColor = "#9575CD";
   backgroundColor = "#94dbf3";
