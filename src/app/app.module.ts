@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './dashboard/map/map.component';
 import { DashboardDataRetrieverService } from './data-retriever/dashboard-data-retriever.service';
 import { TotalFlightsWidgetComponent } from './dashboard/total-flights-widget/total-flights-widget.component';
+import { TotalDistanceWidgetComponent } from './dashboard/total-distance-widget/total-distance-widget.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TotalFlightsWidgetComponent } from './dashboard/total-flights-widget/to
     AppComponent,
     DashboardComponent,
     MapComponent,
-    TotalFlightsWidgetComponent
+    TotalFlightsWidgetComponent,
+    TotalDistanceWidgetComponent
   ],
   imports: [
     BrowserModule,

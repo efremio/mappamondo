@@ -21,7 +21,7 @@ export class MapComponent {
   latCenter: number = 20;
   lngCenter: number = 10;
 
-  strokeColor = "#9575CD";
+  strokeColor = "#757575";
   backgroundColor = "#94dbf3";
   useGeodesicLines = true;
   markerIcon = {
