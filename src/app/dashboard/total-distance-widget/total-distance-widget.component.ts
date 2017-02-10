@@ -43,14 +43,10 @@ export class TotalDistanceWidgetComponent implements OnInit {
       Math.cos(f1) * Math.cos(f2) *
       Math.sin(dd / 2) * Math.sin(dd / 2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    var distance = r * c;
-
-      console.log("distance between " + a1.city + " and " + a2.city + " is "+distance);
-
-      return distance;
+    return Math.round(r * c);
   }
 
   private toRadians(degrees: number): number {
-    return degrees * Math.PI / 180;
+    return degrees * 0.01745329251; //* Math.PI / 180;
   }
 }

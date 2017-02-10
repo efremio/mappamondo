@@ -14,6 +14,7 @@ import { MapComponent } from './dashboard/map/map.component';
 import { DashboardDataRetrieverService } from './data-retriever/dashboard-data-retriever.service';
 import { TotalFlightsWidgetComponent } from './dashboard/total-flights-widget/total-flights-widget.component';
 import { TotalDistanceWidgetComponent } from './dashboard/total-distance-widget/total-distance-widget.component';
+import { TotalTimeWidgetComponent } from './dashboard/total-time-widget/total-time-widget.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TotalDistanceWidgetComponent } from './dashboard/total-distance-widget/
     DashboardComponent,
     MapComponent,
     TotalFlightsWidgetComponent,
-    TotalDistanceWidgetComponent
+    TotalDistanceWidgetComponent,
+    TotalTimeWidgetComponent
   ],
   imports: [
     BrowserModule,
