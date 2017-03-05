@@ -25,22 +25,18 @@
 <div class="spacer"></div>
 
 <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="none stretch">
-  <md-card fxFlex>
-    
-    
-<canvas *ngIf="lineChartData && lineChartLabels" baseChart width="400" height="300"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType">
-                </canvas>
+  <md-card fxFlex="50">
+    FLIGHTS PER YEAR
+    <canvas *ngIf="lineChartData && lineChartLabels" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+      [colors]="lineChartColors" [chartType]="lineChartType">
+    </canvas>
 
 
   </md-card>
   <div class="spacer"></div>
-  <md-card fxFlex>
-    <app-total-distance-widget [flights]="flights" [airports]="airports"></app-total-distance-widget>
+  <md-card fxFlex="50">
+    <canvas *ngIf="lineChartData && lineChartLabels" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+      [colors]="lineChartColors" [chartType]="lineChartType">
+    </canvas>
   </md-card>
 </div>

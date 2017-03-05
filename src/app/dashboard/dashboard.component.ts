@@ -12,9 +12,9 @@ import { Airport } from '../data-retriever/airport';
 export class DashboardComponent implements OnInit {
   flights: Flight[];
   airports: Airport[];
-  flightChartData: number[] = [];
-  lineChartData: Array<any>;// = [{ data: [], label: '' }];
-  lineChartLabels: Array<any>;// = Object.keys(this.flightChartData);
+  flightChartData: number[];
+  lineChartData: Array<any>;
+  lineChartLabels: Array<any>;
 
   constructor(private _dashboardDataRetrieverService: DashboardDataRetrieverService) { }
 
@@ -27,14 +27,13 @@ export class DashboardComponent implements OnInit {
         //we have the data, let's build charts data
         this.buildChartData();
       });
-
-
   }
 
   buildChartData() {
     //add all the flights and store the min and max year
     var minY = new Date().getFullYear();
     var maxY = new Date().getFullYear();
+    this.flightChartData = [];
     this.flightChartData[minY] = 0; //put at least current year
     for (let f of this.flights) {
       var year = parseInt(f.date.split("-")[0]);
@@ -62,7 +61,6 @@ export class DashboardComponent implements OnInit {
       console.log(p + ": " + this.flightChartData[p]);
     }*/
 
-
     this.lineChartData = [{ data: this.flightChartData.slice(minY, maxY + 1), label: 'Flights' }];
     this.lineChartLabels = Object.keys(this.flightChartData);
   }
@@ -70,45 +68,40 @@ export class DashboardComponent implements OnInit {
 
 
 
-
-
-
-
-  /*options: any = {
-   borderWidth: 10,
-   scales: {
-     yAxes: [{
-       ticks: {
-         max: 10,
-         min: 0,
-         stepSize: 0.1
-       }
-     }]
-   }
-  };*/
-
-
   public lineChartOptions: any = {
-    responsive: true
+    responsive: true,
+    scales: {
+      yAxes: [{
+        ticks: {
+          maxTicksLimit: 6
+        }
+      }]
+    },
+    legend: {
+      display: false
+    },
+    tooltips: {
+      cornerRadius: 2,
+      displayColors: false,
+      titleFontSize: 20,
+    },
+    elements: {
+      point: {
+        radius: 4,
+        hoverRadius: 5,
+        hitRadius: 5
+      }
+    }
   };
 
   public lineChartColors: Array<any> = [
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.8)',
+    { // primary
+      backgroundColor: 'rgba(205,220,57,0.7)',
       borderColor: 'rgba(148,159,177,1)',
       pointBackgroundColor: 'rgba(148,159,177,1)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)',
-      borderWidth: 1
-    },
-    { // dark grey
-      backgroundColor: 'rgba(77,83,96,0.2)',
-      borderColor: 'rgba(77,83,96,1)',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(77,83,96,1)',
       borderWidth: 1
     }
   ];

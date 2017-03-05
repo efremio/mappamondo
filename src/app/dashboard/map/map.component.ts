@@ -173,7 +173,7 @@ export class MapComponent {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#94dbf3"
+          "color": "#B2EBF2"//"#94dbf3"
         }
       ]
     }
