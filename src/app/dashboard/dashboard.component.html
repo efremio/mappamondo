@@ -28,14 +28,14 @@
   <md-card fxFlex>
     
     
-<canvas baseChart width="400" height="300"
+<canvas *ngIf="lineChartData && lineChartLabels" baseChart width="400" height="300"
                 [datasets]="lineChartData"
                 [labels]="lineChartLabels"
                 [options]="lineChartOptions"
                 [colors]="lineChartColors"
                 [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                [options]="options"></canvas>
+                [chartType]="lineChartType">
+                </canvas>
 
 
   </md-card>

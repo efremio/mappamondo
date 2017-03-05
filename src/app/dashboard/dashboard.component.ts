@@ -12,6 +12,9 @@ import { Airport } from '../data-retriever/airport';
 export class DashboardComponent implements OnInit {
   flights: Flight[];
   airports: Airport[];
+  flightChartData: number[] = [];
+  lineChartData: Array<any>;// = [{ data: [], label: '' }];
+  lineChartLabels: Array<any>;// = Object.keys(this.flightChartData);
 
   constructor(private _dashboardDataRetrieverService: DashboardDataRetrieverService) { }
 
@@ -20,7 +23,48 @@ export class DashboardComponent implements OnInit {
       .subscribe(data => {
         this.flights = data.flights;
         this.airports = data.airports;
-      })
+
+        //we have the data, let's build charts data
+        this.buildChartData();
+      });
+
+
+  }
+
+  buildChartData() {
+    //add all the flights and store the min and max year
+    var minY = new Date().getFullYear();
+    var maxY = new Date().getFullYear();
+    this.flightChartData[minY] = 0; //put at least current year
+    for (let f of this.flights) {
+      var year = parseInt(f.date.split("-")[0]);
+      if (this.flightChartData[year] == undefined) {
+        this.flightChartData[year] = 0;
+      }
+      this.flightChartData[year]++;
+
+      //find min and max
+      if (year < minY) {
+        minY = year;
+      } else if (year > maxY) {
+        maxY = year;
+      }
+    }
+
+    //fill missing years with zeros
+    for (var i = minY; i <= maxY; i++) {
+      if (this.flightChartData[i] == undefined) {
+        this.flightChartData[i] = 0;
+      }
+    }
+
+    /*for (let p of Object.keys(this.flightChartData)) {
+      console.log(p + ": " + this.flightChartData[p]);
+    }*/
+
+
+    this.lineChartData = [{ data: this.flightChartData.slice(minY, maxY + 1), label: 'Flights' }];
+    this.lineChartLabels = Object.keys(this.flightChartData);
   }
 
 
@@ -30,24 +74,24 @@ export class DashboardComponent implements OnInit {
 
 
 
+  /*options: any = {
+   borderWidth: 10,
+   scales: {
+     yAxes: [{
+       ticks: {
+         max: 10,
+         min: 0,
+         stepSize: 0.1
+       }
+     }]
+   }
+  };*/
 
 
-
-  // lineChart
-  public lineChartData: Array<any> = [
-    { data: [65, 59, 80, 81, 56, 55, 40, 10, 5, 10, 15, 35], label: 'Current year' },
-    { data: [28, 48, 40, 19, 86, 27, 90, 65, 59, 80, 81, 56], label: '2016' }
-  ];
-
-  options: any = {
-    borderWidth: 10
-  };
-
-
-  public lineChartLabels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
   public lineChartOptions: any = {
     responsive: true
   };
+
   public lineChartColors: Array<any> = [
     { // grey
       backgroundColor: 'rgba(148,159,177,0.8)',
