@@ -49,4 +49,12 @@ export class TotalDistanceWidgetComponent implements OnInit {
   private toRadians(degrees: number): number {
     return degrees * 0.01745329251; //* Math.PI / 180;
   }
+
+  getEarthDistance(): string {
+    return (this.getTotalDistance() / 40075).toFixed(2);
+  } 
+  
+  getMoonDistance(): string {
+    return (this.getTotalDistance() / 384400).toFixed(2);
+  }
 }
