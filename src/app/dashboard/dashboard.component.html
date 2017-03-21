@@ -27,14 +27,20 @@
 <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="none stretch">
   <md-card fxFlex="50">
     FLIGHTS PER YEAR
-    <canvas *ngIf="lineChartData && lineChartLabels" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
-      [colors]="lineChartColors" [chartType]="lineChartType">
-    </canvas>
+    <canvas *ngIf="lineChartData && lineChartLabels" baseChart chartType="line" [datasets]="lineChartData" [labels]="lineChartLabels"
+      [options]="lineChartOptions" [colors]="lineChartColors">
+      </canvas>
 
 
   </md-card>
   <div class="spacer"></div>
-  <md-card fxFlex="50">
+  <md-card fxFlex="25">
+    CLASS
+    <canvas *ngIf="doughnutChartData" baseChart chartType="doughnut" [data]="doughnutChartData" [labels]="doughnutChartLabels" [options]="doughnutChartOptions" [colors]="doughnutChartColors"></canvas>
+  </md-card>
+  <div class="spacer"></div>
+  <md-card fxFlex="25">
+    REASON
     
   </md-card>
 </div>
