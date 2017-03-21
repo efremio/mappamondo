@@ -93,7 +93,7 @@ export class DashboardComponent implements OnInit {
     tooltips: {
       cornerRadius: 2,
       displayColors: false,
-      titleFontSize: 20,
+      titleFontSize: 20
     },
     elements: {
       point: {
@@ -118,13 +118,17 @@ export class DashboardComponent implements OnInit {
 
 
   //doughnut
-  public doughnutChartLabels: string[] = ['Economy', 'Economy +', 'Business', 'First'];
+  public doughnutChartLabels: string[] = [' Economy', ' Economy +', ' Business', ' First'];
   private doughnutChartColors: any[] = [{ backgroundColor: ["#FFF59D", "#FFE082", "#FFCC80", "#FFAB91"] }];
   public doughnutChartData: number[];
   public doughnutChartOptions: any = {
     responsive: true,
     legend: {
       display: false
+    },
+    tooltips: {
+      cornerRadius: 2,
+      titleFontSize: 20
     }
   };
 
