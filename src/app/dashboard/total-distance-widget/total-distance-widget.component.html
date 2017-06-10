@@ -1,3 +1,13 @@
-<span *ngIf="flights"> {{ getTotalDistance() }} km</span>
-<span *ngIf="flights"> {{ getEarthDistance() }}x around earth</span>
-<span *ngIf="flights"> {{ getMoonDistance() }}x around moon</span>
+<div id="total-distance" *ngIf="flights">
+    <span class="bold-data-primary gradient-color">{{ getTotalDistance() }}</span><span> km</span>
+    <div id="roller-1" class="animated" [ngClass]="(secondaryDataID==0)?'flipInX':'hidden'">
+        <span class="bold-data-secondary gradient-color">{{ getEarthDistance() }}</span><span> x around earth</span>
+    </div>
+    <div id="roller-2" class="animated" [ngClass]="(secondaryDataID==1)?'flipInX':'hidden'">
+        <span class="bold-data-secondary gradient-color">{{ getMoonDistance() }}</span><span> x to the moon</span>
+    </div>
+</div>
+
+
+
+

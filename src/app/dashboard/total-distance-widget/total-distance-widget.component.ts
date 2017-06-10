@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SimpleTimer } from 'ng2-simple-timer';
 
 import { Flight } from '../../data-retriever/flight';
 import { Airport } from '../../data-retriever/airport';
@@ -12,9 +13,21 @@ export class TotalDistanceWidgetComponent implements OnInit {
   @Input() flights: Flight[];
   @Input() airports: Airport[];
 
-  constructor() { }
+  secondaryDataID: number;
+
+  constructor(private st: SimpleTimer) { }
 
   ngOnInit() {
+    this.st.newTimer('5sec', 5);
+    this.st.subscribe('5sec', e => this.callbackTimer());
+    this.secondaryDataID = 0;
+  }
+
+  callbackTimer() {
+    if(this.secondaryDataID == 0)
+      this.secondaryDataID = 1;
+    else
+      this.secondaryDataID = 0;
   }
 
   getTotalDistance(): number {

@@ -1,3 +1,25 @@
-<span *ngIf="flights">
-  {{ getTotalTime().hours }} hours and {{ getTotalTime().minutes }} minutes
-</span>
+<div *ngIf="flights">
+  <div *ngIf="getTotalTime().days > 0">
+    <div>
+      <span class="bold-data-primary gradient-color">{{ getTotalTime().days }}</span>
+      <span *ngIf="getTotalTime().days > 1"> days,</span>
+      <span *ngIf="getTotalTime().days == 1"> day,</span>
+    </div>
+    <div>
+      <span class="bold-data-secondary gradient-color">{{ getTotalTime().hours }}</span>
+      <span *ngIf="getTotalTime().hours > 1 || getTotalTime().hours == 0"> hours and </span>
+      <span *ngIf="getTotalTime().hours == 1"> hour and </span>
+      <span class="bold-data-secondary gradient-color">{{ getTotalTime().minutes }}</span>
+      <span *ngIf="getTotalTime().minutes > 1 || getTotalTime().minutes == 0"> minutes</span>
+      <span *ngIf="getTotalTime().minutes == 1"> minute</span>
+    </div>
+  </div>
+  <div *ngIf="getTotalTime().days == 0">
+    <span class="bold-data-primary gradient-color">{{ getTotalTime().hours }}</span>
+    <span *ngIf="getTotalTime().hours > 1 || getTotalTime().hours == 0"> hours and </span>
+    <span *ngIf="getTotalTime().hours == 1"> hour and </span>
+    <span class="bold-data-primary gradient-color">{{ getTotalTime().minutes }}</span>
+    <span *ngIf="getTotalTime().minutes > 1 || getTotalTime().minutes == 0"> minutes</span>
+    <span *ngIf="getTotalTime().minutes == 1"> minute</span>
+  </div>
+</div>

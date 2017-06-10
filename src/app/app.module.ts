@@ -7,6 +7,7 @@ import 'hammerjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AgmCoreModule, MapTypeStyle } from 'angular2-google-maps/core';
 import { ChartsModule } from 'ng2-charts';
+import { SimpleTimer } from 'ng2-simple-timer';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -38,7 +39,8 @@ import { TotalTimeWidgetComponent } from './dashboard/total-time-widget/total-ti
     ChartsModule //ng2 charts
   ],
   providers: [
-    DashboardDataRetrieverService
+    DashboardDataRetrieverService,
+    SimpleTimer
   ],
   bootstrap: [AppComponent]
 })

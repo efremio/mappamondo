@@ -19,7 +19,9 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "./assets/styles/material-theme.scss"
+        "./assets/styles/material-theme.scss",
+        "./assets/styles/animate.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css"
       ],
       "scripts": ["../node_modules/chart.js/dist/Chart.bundle.min.js"],
       "environments": {

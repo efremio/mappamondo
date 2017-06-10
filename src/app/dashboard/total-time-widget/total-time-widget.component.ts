@@ -11,11 +11,14 @@ export class TotalTimeWidgetComponent implements OnInit {
   @Input() flights: Flight[];
 
   constructor() { }
+  private time: Time;
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   getTotalTime(): Time {
+    if(this.time != undefined) //return cached value if possible
+      return this.time;
+
     var minutes: number = 0;
     for (var flight of this.flights) {
       var stringTime = flight.duration.split(":");
@@ -24,14 +27,18 @@ export class TotalTimeWidgetComponent implements OnInit {
     }
 
     var time = new Time();
-    time.hours = Math.trunc(minutes / 60);
+    time.days = Math.trunc(minutes / 1440);
+    time.hours = Math.trunc(minutes % 1440 / 60);
     time.minutes = minutes % 60;
+
+    this.time = time; //save in cache
     return time;
   }
 
 }
 
 class Time {
+  days: number;
   hours: number;
   minutes: number;
 }
