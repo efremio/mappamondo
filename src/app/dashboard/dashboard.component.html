@@ -36,11 +36,11 @@
   <div class="spacer"></div>
   <md-card fxFlex="25">
     CLASS
-    <canvas *ngIf="doughnutChartData" baseChart chartType="doughnut" [data]="doughnutChartData" [labels]="doughnutChartLabels" [options]="doughnutChartOptions" [colors]="doughnutChartColors"></canvas>
+    <canvas *ngIf="classChartData" baseChart chartType="doughnut" [data]="classChartData" [labels]="classChartLabels" [options]="classChartOptions" [colors]="classChartColors"></canvas>
   </md-card>
   <div class="spacer"></div>
   <md-card fxFlex="25">
     REASON
-    
+    <canvas *ngIf="reasonChartData" baseChart chartType="doughnut" [data]="reasonChartData" [labels]="reasonChartLabels" [options]="reasonChartOptions" [colors]="reasonChartColors"></canvas>
   </md-card>
 </div>

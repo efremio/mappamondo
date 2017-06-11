@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
         //we have the data, let's build charts data
         this.buildYearChartData();
         this.buildClassChartData();
+        this.buildReasonChartData();
       });
   }
 
@@ -63,22 +64,35 @@ export class DashboardComponent implements OnInit {
 
   buildClassChartData() {
     //build class chart
-    this.doughnutChartData = [0, 0, 0, 0];
+    this.classChartData = [0, 0, 0, 0];
     for (let f of this.flights) {
       if (f.flight_class == "economy") {
-        this.doughnutChartData[0]++;
+        this.classChartData[0]++;
       } else if (f.flight_class == "economy+") {
-        this.doughnutChartData[1]++;
+        this.classChartData[1]++;
       } else if (f.flight_class == "business") {
-        this.doughnutChartData[2]++;
+        this.classChartData[2]++;
       } else if (f.flight_class == "first") {
-        this.doughnutChartData[3]++;
+        this.classChartData[3]++;
       }
     }
-
   }
 
-  public lineChartOptions: any = {
+  buildReasonChartData() {
+    //build class chart
+    this.reasonChartData = [0, 0, 0];
+    for (let f of this.flights) {
+      if (f.flight_reason == "leisure") {
+        this.reasonChartData[0]++;
+      } else if (f.flight_reason == "business") {
+        this.reasonChartData[1]++;
+      } else {
+        this.reasonChartData[2]++;
+      }
+    }
+  }
+
+  lineChartOptions: any = {
     responsive: true,
     scales: {
       yAxes: [{
@@ -104,7 +118,7 @@ export class DashboardComponent implements OnInit {
     }
   };
 
-  public lineChartColors: Array<any> = [
+  lineChartColors: Array<any> = [
     { //primary
       backgroundColor: 'rgba(205,220,57,0.7)',
       borderColor: 'rgba(148,159,177,1)',
@@ -117,14 +131,41 @@ export class DashboardComponent implements OnInit {
   ];
 
 
-  //doughnut
-  public doughnutChartLabels: string[] = [' Economy', ' Economy +', ' Business', ' First'];
-  private doughnutChartColors: any[] = [{ backgroundColor: ["#FFF59D", "#FFE082", "#FFCC80", "#FFAB91"] }];
-  public doughnutChartData: number[];
-  public doughnutChartOptions: any = {
+  //class chart
+  classChartLabels: string[] = [' Economy', ' Economy +', ' Business', ' First'];
+  classChartColors: any[] = [{ backgroundColor: ["#FFF59D", "#FFE082", "#FFCC80", "#FFAB91"] }];
+  classChartData: number[];
+  classChartOptions: any = {
     responsive: true,
     legend: {
-      display: false
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontSize: 10,
+        fontFamily: 'Overpass',
+        usePointStyle: true
+      }
+    },
+    tooltips: {
+      cornerRadius: 2,
+      titleFontSize: 20
+    }
+  };
+
+  //reason chart
+  reasonChartLabels: string[] = [' Leisure', ' Business', ' Other'];
+  reasonChartColors: any[] = [{ backgroundColor: ["#FFF59D", "#FFE082", "#FFCC80"] }];
+  reasonChartData: number[];
+  reasonChartOptions: any = {
+    responsive: true,
+    legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontSize: 10,
+        fontFamily: 'Overpass',
+        usePointStyle: true
+      }
     },
     tooltips: {
       cornerRadius: 2,

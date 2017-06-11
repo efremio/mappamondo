@@ -14,7 +14,7 @@
       "seat_number": "",
       "seat_type": "",
       "flight_class": "business",
-      "flight_reason": "business",
+      "flight_reason": "other",
       "note": "",
       "distance": "572.283",
       "departing_airport_id": "4",
