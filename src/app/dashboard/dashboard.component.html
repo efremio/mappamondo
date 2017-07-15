@@ -1,22 +1,20 @@
 <md-grid-list cols="6" rowHeight="100px" gutterSize="20px">
-  <md-grid-tile colspan="6" rowspan="4" class="mat-elevation-z2">
+  <md-grid-tile colspan="6" rowspan="4" class="mat-elevation-z2 br2">
     <app-map *ngIf="flights" [flights]="flights" [airports]="airports"></app-map>
   </md-grid-tile>
 </md-grid-list>
 
 <!--<md-card class="map-card">
-  <app-map [flights]="flights"></app-map>
+  <app-map *ngIf="flights" [flights]="flights" [airports]="airports"></app-map>
 </md-card>-->
 
 <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="none stretch">
   <md-card fxFlex>
     <app-total-flights-widget [flights]="flights"></app-total-flights-widget>
   </md-card>
-  <div class="spacer"></div>
   <md-card fxFlex>
     <app-total-distance-widget [flights]="flights" [airports]="airports"></app-total-distance-widget>
   </md-card>
-  <div class="spacer"></div>
   <md-card fxFlex>
     <app-total-time-widget [flights]="flights"></app-total-time-widget>
   </md-card>
@@ -33,12 +31,10 @@
 
 
   </md-card>
-  <div class="spacer"></div>
   <md-card fxFlex="25">
     CLASS
     <canvas *ngIf="classChartData" baseChart chartType="doughnut" [data]="classChartData" [labels]="classChartLabels" [options]="classChartOptions" [colors]="classChartColors"></canvas>
   </md-card>
-  <div class="spacer"></div>
   <md-card fxFlex="25">
     REASON
     <canvas *ngIf="reasonChartData" baseChart chartType="doughnut" [data]="reasonChartData" [labels]="reasonChartLabels" [options]="reasonChartOptions" [colors]="reasonChartColors"></canvas>
