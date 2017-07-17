@@ -57,6 +57,7 @@ body {
 md-card.mat-card {
   background-color: rgba(255,255,255,0.6);
   margin: 10px;
+  min-width: 100px;
 }
 
 md-grid-list.mat-grid-list {

@@ -21,8 +21,8 @@ export class MapComponent {
   latCenter: number = 20;
   lngCenter: number = 10;
 
-  strokeColor = "#757575";
-  backgroundColor = "#b2ebf2";
+  strokeColor = "#37474F"; //"#757575";
+  backgroundColor = "#CFD8DC";
   useGeodesicLines = true;
   markerIcon = {
     url: 'assets/images/map-marker-32.png',
@@ -173,7 +173,7 @@ export class MapComponent {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#b2ebf2"
+          "color": "#CFD8DC"
         }
       ]
     }
